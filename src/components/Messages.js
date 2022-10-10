@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 function Messages(props) {
     const showMessage = (message) => {
         const {member, text, user} = message;
@@ -6,7 +8,7 @@ function Messages(props) {
         const memberColor = currentMember ? {borderRight: `solid ${member.clientData.color} 7px`} : {borderLeft: `solid ${member.clientData.color} 7px`};
 
         return (
-            <li key={member.clientData.color} className={className}>
+            <li key={Math.random()} className={className}>
                 <div className="message">
                     <p className="name"><b>{member.clientData.name}</b></p>
                     <p className="text" style={memberColor}>{text}</p>
@@ -14,6 +16,7 @@ function Messages(props) {
             </li>
         )
     }
+    
 
     return (
         <div id="messages">

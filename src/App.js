@@ -26,10 +26,14 @@ function App() {
   const onSubmit = (e) => {
     e.preventDefault();
     setText("");
-    drone.publish({
-      room: "observable-chatRoom",
-      message: text
-    });
+    if (text.trim() === "") {
+      alert("No message")
+    }else {
+      drone.publish({
+        room: "observable-chatRoom",
+        message: text
+      });
+    }
   }
 
   useEffect(() => {

@@ -57,7 +57,7 @@ li {
   margin-left: 20px;
   margin-right: 20px;
   padding: 10px 20px 10px 20px;
-  white-space: normal;
+  word-wrap: break-word;
   text-align: start;
   background-color: #333;
 }
@@ -69,6 +69,7 @@ form {
   height: 7%;
   background-color: #222;
   padding-bottom: 25px;
+  padding-top: 10px;
 }
 
 input {
