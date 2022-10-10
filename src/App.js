@@ -27,7 +27,7 @@ function App() {
     e.preventDefault();
     setText("");
     if (text.trim() === "") {
-      alert("No message")
+      alert("Please enter your message!")
     }else {
       drone.publish({
         room: "observable-chatRoom",
